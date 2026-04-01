@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Muhammad Ahmad Khan | Data Analyst & BI Specialist</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f8fafc;
+    color: #0f172a;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #e2e8f0;
+}
+::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+    border-radius: 12px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #2563eb;
+}
+
+/* HERO SECTION - Modern Professional */
+.hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #2d3a4f 100%);
+    color: white;
+    padding: 60px 24px 70px 24px;
+    position: relative;
+    overflow: hidden;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(59,130,246,0.2) 0%, rgba(59,130,246,0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: -5%;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(139,92,246,0.15) 0%, rgba(139,92,246,0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+.hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+.hero-img-wrapper {
+    flex-shrink: 0;
+}
+.hero img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid rgba(255,255,255,0.9);
+    object-fit: cover;
+    box-shadow: 0 20px 30px -12px rgba(0,0,0,0.3);
+    transition: transform 0.25s ease;
+}
+.hero img:hover {
+    transform: scale(1.02);
+}
+.hero-text {
+    flex: 1;
+}
+.hero h1 {
+    margin: 0 0 6px 0;
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #ffffff, #94a3b8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.role {
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: #a5b4fc;
+    margin: 8px 0 4px;
+}
+.experience {
+    font-size: 1rem;
+    color: #cbd5e1;
+    font-weight: 500;
+    background: rgba(255,255,255,0.1);
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 40px;
+    margin: 12px 0 8px;
+}
+.tagline {
+    font-size: 1.05rem;
+    font-style: italic;
+    font-weight: 400;
+    color: #cbd5e6;
+    border-left: 3px solid #3b82f6;
+    padding-left: 14px;
+    margin: 12px 0 10px;
+}
+.desc {
+    font-size: 1rem;
+    color: #e2e8f0;
+    line-height: 1.5;
+    max-width: 750px;
+    margin-top: 8px;
+}
+
+/* section container */
+.section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+/* Skills area - Modern */
+.skills-panel {
+    background: white;
+    border-radius: 28px;
+    padding: 32px 36px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.05);
+    transition: all 0.2s;
+    border: 1px solid rgba(59,130,246,0.1);
+}
+.skills-panel h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #0f172a;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.skill {
+    background: linear-gradient(105deg, #3b82f6 0%, #6366f1 100%);
+    color: white;
+    padding: 8px 22px;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 8px rgba(59,130,246,0.25);
+    transition: all 0.2s;
+}
+.skill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 20px -10px rgba(59,130,246,0.4);
+}
+
+/* unified card style for projects & automate */
+.power-automate, .project {
+    background: white;
+    border-radius: 28px;
+    padding: 32px 36px;
+    margin-bottom: 32px;
+    box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(59,130,246,0.08);
+}
+.power-automate:hover, .project:hover {
+    box-shadow: 0 24px 48px -16px rgba(59, 130, 246, 0.2);
+    transform: translateY(-2px);
+}
+.power-automate h2, .project h2 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #0f172a;
+}
+.power-automate h2 img, .project h2 img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+.power-automate p, .project p {
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    font-size: 1rem;
+}
+.power-automate {
+    background: linear-gradient(115deg, #ffffff 0%, #fef9f0 100%);
+    border-left: 6px solid #3b82f6;
+}
+
+/* screenshot grid - Enhanced styling */
+.screenshot-container {
+    display: flex;
+    gap: 28px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.screenshot-card {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 28px -8px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    background: #f1f5f9;
+    border: 1px solid rgba(59,130,246,0.2);
+}
+.screenshot-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 28px 40px -16px rgba(59,130,246,0.35);
+    border-color: #3b82f6;
+}
+.screenshot-card img {
+    width: 100%;
+    display: block;
+    height: 240px;
+    object-fit: cover;
+    object-position: top;
+    transition: all 0.4s;
+    background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+}
+.view-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(4px);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: opacity 0.3s;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    gap: 10px;
+    font-family: inherit;
+}
+.screenshot-card:hover .view-overlay {
+    opacity: 1;
+}
+.view-overlay::after {
+    content: "🔍";
+    font-size: 1.2rem;
+    margin-left: 6px;
+}
+
+/* special cards */
+.single-card .screenshot-card {
+    max-width: 480px;
+}
+.single-card .screenshot-card img {
+    height: 280px;
+}
+
+/* project icons */
+.project-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    border-radius: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 6px 12px -6px rgba(59,130,246,0.4);
+}
+
+/* Contact Section - Professional */
+.contact {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+    padding: 56px 24px;
+    text-align: center;
+    border-radius: 40px 40px 0 0;
+    margin-top: 48px;
+}
+.contact h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, #ffffff, #a5b4fc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.contact p {
+    font-size: 1.1rem;
+    margin: 12px 0;
+    color: #e2e8f0;
+}
+.contact a {
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+    border-bottom: 1px solid transparent;
+}
+.contact a:hover {
+    color: #93c5fd;
+    border-bottom-color: #93c5fd;
+}
+.email-link {
+    background: rgba(96,165,250,0.15);
+    display: inline-block;
+    padding: 8px 24px;
+    border-radius: 40px;
+    margin-top: 12px;
+    backdrop-filter: blur(4px);
+}
+.email-link a {
+    border-bottom: none;
+}
+
+/* badge styles */
+.tech-badge {
+    background: #eef2ff;
+    color: #1e40af;
+    padding: 6px 14px;
+    border-radius: 24px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 12px;
+}
+
+/* Target Dashboard Icon Fix */
+.target-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+@media (max-width: 780px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero-text .desc {
+        text-align: center;
+    }
+    .tagline {
+        text-align: center;
+        border-left: none;
+        padding-left: 0;
+    }
+    .screenshot-card {
+        max-width: 100%;
+    }
+    .screenshot-container {
+        justify-content: center;
+    }
+    .power-automate, .project {
+        padding: 24px;
+    }
+    .skills-panel {
+        padding: 24px;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO SECTION -->
+<header class="hero">
+    <div class="hero-content">
+        <div class="hero-img-wrapper">
+            <img src="Profile.JPEG" alt="Muhammad Ahmad Khan - Data Analyst Profile">
+        </div>
+        <div class="hero-text">
+            <h1>Muhammad Ahmad Khan</h1>
+            <p class="role">📊 Data Analyst | Business Intelligence Specialist</p>
+            <p class="experience">⭐ 5+ Years in Power BI, SQL, Power Automate, ETL & Dashboard Engineering</p>
+            <p class="tagline">“Transforming complex data into strategic business intelligence”</p>
+            <p class="desc">
+                Results-driven Data Analyst with a proven track record of building interactive dashboards, automating mission-critical workflows, and enabling data-driven cultures. I bridge the gap between raw data and executive decision-making — delivering clarity, speed, and measurable impact.
+            </p>
+        </div>
+    </div>
+</header>
+
+<!-- SKILLS SECTION -->
+<div class="section">
+    <div class="skills-panel">
+        <h2>⚙️ Core Competencies</h2>
+        <div class="skills">
+            <div class="skill">Power BI (DAX, Power Query)</div>
+            <div class="skill">SQL Server (T-SQL)</div>
+            <div class="skill">Power Automate Cloud Flows</div>
+            <div class="skill">Advanced Data Analysis</div>
+            <div class="skill">Interactive Dashboards</div>
+            <div class="skill">Data Modeling & ETL</div>
+            <div class="skill">SharePoint Integration</div>
+            <div class="skill">Row-Level Security (RLS)</div>
+            <div class="skill">Excel & Python</div>
+        </div>
+    </div>
+</div>
+
+<!-- POWER AUTOMATE CLOUD FLOWS -->
+<div class="section">
+    <div class="power-automate">
+        <h2>⚡ Power Automate Cloud Flows | Intelligent Task Automation</h2>
+        <p>✅ <strong>Individualized Reminder Engine:</strong> Built a dynamic workflow that scans SharePoint task lists, filters tasks per user, and sends personalized email reminders with embedded HTML tables listing each user's pending responsibilities. This reduced overdue tasks by 40% within 2 months.</p>
+        <p>✅ <strong>Manager Consolidation Logic:</strong> Extended the flow to compile all individual task summaries into a single executive digest email for managers — enabling full visibility without inbox overload. Real-time accountability and operational oversight improved by 60%.</p>
+        <p>✅ <strong>Approval Workflow Cycle:</strong> Developed a bi-directional approval mechanism where users submit task updates, managers review & approve changes, and updates are automatically reflected back into SharePoint data sources — ensuring seamless governance and audit trail.</p>
+        <div class="screenshot-container">
+            <div class="screenshot-card">
+                <img src="R11.PNG" alt="Power Automate Flow - Individual Reminder Logic">
+                <a href="R11.PNG" target="_blank" class="view-overlay">View Flow Logic</a>
+            </div>
+            <div class="screenshot-card">
+                <img src="R22.PNG" alt="Power Automate Flow - Manager Summary Digest">
+                <a href="R22.PNG" target="_blank" class="view-overlay">Manager Digest View</a>
+            </div>
+        </div>
+        <div class="tech-badge">🔁 SharePoint | Outlook 365 | HTML Tables | Parallel Approvals</div>
+    </div>
+</div>
+
+<!-- POWER BI + POWER AUTOMATE APPROVAL FLOW -->
+<div class="section">
+    <div class="power-automate">
+        <h2>🔄 Power BI → Power Automate Approval Loop | Real-time Sync</h2>
+        <p>Designed a mission-critical integration between Power BI reports and Power Automate to enable one-click task completion approvals directly from dashboards. When a user clicks "Request Approval" inside a Power BI report, an automated approval request is sent to the manager with full context.</p>
+        <p>✔️ Upon manager approval, the system instantly updates the backend SharePoint data source and refreshes the Power BI dashboard — eliminating data latency. Users receive an email confirmation, and all stakeholders stay aligned. This end-to-end solution increased task cycle efficiency by 55% and reduced manual follow-ups.</p>
+        <div class="screenshot-container single-card">
+            <div class="screenshot-card">
+                <img src="BI.PNG" alt="Power BI embedded approval flow dashboard">
+                <a href="BI.PNG" target="_blank" class="view-overlay">Launch Preview</a>
+            </div>
+        </div>
+        <div class="tech-badge">✨ Real-time Governance | 70% faster approvals | Audit Trail</div>
+    </div>
+</div>
+
+<!-- INTERNAL & EXTERNAL TARGETS DASHBOARD - FIXED SECTION -->
+<div class="section">
+    <div class="project">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+            <div class="target-icon">🎯</div>
+            <h2 style="margin-bottom: 0;">Internal & External Targets Dashboard</h2>
+        </div>
+        <p><strong>Business Impact:</strong> Engineered a multi-layered Power BI solution featuring 4 interactive pages that tracks KPIs across WBS-level performance, departmental targets, and predictive forecasting. Integrated complex data from SharePoint lists, Excel workbooks, and SQL views to provide real-time insights for C-level reviews and strategic planning.</p>
+        <p>📈 <strong>Key Features:</strong> Drill-through filters for deep-dive analysis, dynamic KPI cards with trend indicators, interactive trend lines, and AI-driven forecast visuals for upcoming quarters. Management leverages this dashboard to reallocate resources proactively, prevent budget overruns, and identify top-performing business units with instant visibility.</p>
+        <p>✅ <strong>Results:</strong> Reduced monthly reporting effort by 85%, enabled data-driven target setting across 12 departments, and improved forecast accuracy by 32% through predictive modeling integration.</p>
+        <div class="screenshot-container">
+            <div class="screenshot-card">
+                <img src="D1.PNG" alt="Targets Dashboard - Executive Overview with KPIs">
+                <a href="D1.PNG" target="_blank" class="view-overlay">Executive Overview</a>
+            </div>
+            <div class="screenshot-card">
+                <img src="D2.PNG" alt="WBS Performance Breakdown Dashboard">
+                <a href="D2.PNG" target="_blank" class="view-overlay">WBS Analytics</a>
+            </div>
+            <div class="screenshot-card">
+                <img src="D3.PNG" alt="Forecast & Predictive Insights Dashboard">
+                <a href="D3.PNG" target="_blank" class="view-overlay">Forecast Models</a>
+            </div>
+        </div>
+        <div class="tech-badge">📊 Power BI | DAX | SQL Views | SharePoint Integration | AI Forecasting</div>
+    </div>
+</div>
+
+<!-- ISSUE TRACKING DASHBOARD -->
+<div class="section">
+    <div class="project">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 6px;">
+            <span class="project-icon">⚠️</span>
+            <h2 style="margin-bottom: 0;">Issue & Risk Tracking Dashboard</h2>
+        </div>
+        <p>Built a dedicated <strong>Issue & Risk Tracking Dashboard</strong> integrated with Power Automate, implementing two core workflows:</p>
+        <p>✅ <strong>Automated reminder email workflows</strong> that notify each responsible user individually based on assigned tasks, ensuring accountability and reducing overdue action items by 45%.</p>
+        <p>✅ <strong>Approval workflow cycle</strong> where task updates are reviewed and approved per user, with approved data automatically reflected back into the SharePoint data source — maintaining data integrity and audit compliance.</p>
+        <p>🔐 Implemented <strong>Row-Level Security (RLS) for 1000+ users</strong>, ensuring users can only view sector-specific data and assigned tasks, while maintaining controlled access through the Power Automate system.</p>
+        <div class="screenshot-container">
+            <div class="screenshot-card">
+                <img src="D4.PNG" alt="Issue & Risk Tracking Dashboard - Main View">
+                <a href="D4.PNG" target="_blank" class="view-overlay">View Dashboard</a>
+            </div>
+        </div>
+        <div class="tech-badge">📊 Power BI | Power Automate | RLS | Azure AD Integration</div>
+    </div>
+</div>
+
+<!-- TENDERS TIME SCHEDULE DASHBOARD -->
+<div class="section">
+    <div class="project">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 6px;">
+            <span class="project-icon">📑</span>
+            <h2 style="margin-bottom: 0;">Tenders Time Schedule Dashboard</h2>
+        </div>
+        <p>This comprehensive dashboard provides a <strong>360° overview of tenders and projects</strong>, enabling stakeholders to monitor performance across the entire project lifecycle — from tender issuance to final delivery. Designed for executive-level decision-making, it consolidates critical data streams into a single source of truth.</p>
+        <p>📊 <strong>Key Capabilities:</strong> Tracks tender milestones, bid submission timelines, approval statuses, and project completion rates against baseline schedules. The dashboard visualizes performance trends over time, highlighting delays, bottlenecks, and on-track projects through interactive Gantt-style views, heat maps, and KPI scorecards.</p>
+        <p>⏱️ <strong>Time-Based Analytics:</strong> Leverages time intelligence to compare actual vs. planned timelines, identify recurring delays, and forecast future project completion dates using historical patterns.</p>
+        <p>📈 <strong>Business Impact:</strong> Reduced tender processing time by 28%, improved on-time project delivery by 35%, and provided leadership with real-time visibility into the entire tender portfolio.</p>
+        <div class="screenshot-container">
+            <div class="screenshot-card">
+                <img src="D5.PNG" alt="Tenders Time Schedule Dashboard - 360 Overview">
+                <a href="D5.PNG" target="_blank" class="view-overlay">View Dashboard</a>
+            </div>
+        </div>
+        <div class="tech-badge">📅 Power BI | DAX Time Intelligence | SQL Server | Custom Calendar Tables</div>
+    </div>
+</div>
+
+<!-- GROCERY STORE ANALYTICS DASHBOARD -->
+<div class="section">
+    <div class="project">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 6px;">
+            <span class="project-icon">🛒</span>
+            <h2 style="margin-bottom: 0;">Grocery Store Analytics Dashboard</h2>
+        </div>
+        <p>Excited to share my recently developed <strong>Power BI Dashboard (Grocery Store Analytics)</strong>. This dashboard was designed to provide clear business insights and improve decision-making for retail operations. Some of the key highlights include:</p>
+        <p>🔹 <strong>Interactive Bookmarks</strong> – for easy refresh and navigation<br>
+        🔹 <strong>KPIs Tracking</strong> – Total Sales, Average Sales, Average Ratings, and Number of Items<br>
+        🔹 <strong>Smart Filters</strong> – Item Type, Outlet Location Type, and Outlet Size for flexible analysis<br>
+        🔹 <strong>Visual Insights</strong> – Fat Content distribution with Pie Charts, Fat Content by Outlet comparisons with bar/column charts, and many more insightful visualizations</p>
+        <p>💡 The goal was to transform raw grocery store data into meaningful insights, making it easier to monitor performance and identify growth opportunities. Always excited to keep learning, experimenting, and improving in the field of Data Analytics & Visualization! 📊✨</p>
+        <div class="screenshot-container">
+            <div class="screenshot-card">
+                <img src="D6.PNG" alt="Grocery Store Analytics Dashboard - Retail Insights">
+                <a href="D6.PNG" target="_blank" class="view-overlay">View Dashboard</a>
+            </div>
+        </div>
+        <div class="tech-badge">🛍️ Power BI | DAX Measures | Bookmarks | Retail Analytics | Interactive Filters</div>
+    </div>
+</div>
+
+<!-- CONTACT SECTION - Updated with LinkedIn Link -->
+<div class="contact">
+    <h2>📬 Let's Connect</h2>
+    <p>💼 Open for collaborations, consulting, and data-driven opportunities.</p>
+    <p class="email-link">📧 <a href="numlahmad021@gmail.com">numlahmad021@gmail.com</a></p>
+    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/ahmadkhan1999" target="_blank">www.linkedin.com/in/ahmadkhan1999</a></p>
+    <p>📊 Portfolio | Power BI Showcases | Automation Solutions</p>
+    <p style="font-size: 0.85rem; margin-top: 20px; opacity: 0.7;">© 2025 Muhammad Ahmad Khan — Turning Data into Decisions</p>
+</div>
+
+<!-- Image fallback handler for missing images -->
+<script>
+    (function() {
+        const images = document.querySelectorAll('img');
+        const defaultGradients = {
+            'Profile': 'linear-gradient(135deg, #3b82f6, #6366f1)',
+            'R11': 'linear-gradient(135deg, #1e293b, #334155)',
+            'R22': 'linear-gradient(135deg, #1e293b, #334155)',
+            'BI': 'linear-gradient(135deg, #0f172a, #1e293b)',
+            'D1': 'linear-gradient(135deg, #f59e0b, #ef4444)',
+            'D2': 'linear-gradient(135deg, #10b981, #059669)',
+            'D3': 'linear-gradient(135deg, #8b5cf6, #6366f1)',
+            'D4': 'linear-gradient(135deg, #334155, #1e293b)',
+            'D5': 'linear-gradient(135deg, #2c3e50, #1a2a3a)',
+            'D6': 'linear-gradient(135deg, #1f3a3f, #0f2a2f)'
+        };
+        images.forEach(img => {
+            img.addEventListener('error', function(e) {
+                if (!this.dataset.fallbackSet) {
+                    this.dataset.fallbackSet = 'true';
+                    let gradient = 'linear-gradient(135deg, #3b82f6, #8b5cf6)';
+                    for (let key in defaultGradients) {
+                        if (this.src && this.src.toLowerCase().includes(key.toLowerCase())) {
+                            gradient = defaultGradients[key];
+                            break;
+                        }
+                    }
+                    this.style.background = gradient;
+                    this.style.objectFit = 'cover';
+                    this.style.minHeight = '200px';
+                    this.style.display = 'block';
+                    this.alt = this.alt || 'Dashboard Preview';
+                    // remove src to prevent continuous errors
+                    this.removeAttribute('src');
+                }
+            });
+        });
+    })();
+</script>
+</body>
+</html>
